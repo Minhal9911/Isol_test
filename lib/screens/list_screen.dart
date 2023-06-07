@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_testing/firebase_service.dart';
-import 'package:demo_testing/user_req.dart';
+import 'package:demo_testing/services/firebase_service.dart';
+import 'package:demo_testing/models/user_req.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:marquee/marquee.dart';

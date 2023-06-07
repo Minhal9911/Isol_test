@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_testing/user_req.dart';
+import 'package:demo_testing/models/user_req.dart';
 
 class FirebaseService {
   static const String userCollection = 'USER';
