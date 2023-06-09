@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Get.to(const ListScreen());
+          Get.to(const ListScreen(),transition: Transition.leftToRight);
         },
         child: const Icon(Icons.menu),
       ),
@@ -105,9 +105,11 @@ class _HomePageState extends State<HomePage> {
   Widget buildMobileTextField() {
     return TextField(
       controller: mobController,
+      maxLength: 10,
       decoration: InputDecoration(
         filled: true,
         fillColor: Colors.white,
+        counterText: '',
         enabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: Colors.black54, width: 1),
           borderRadius: BorderRadius.circular(15),

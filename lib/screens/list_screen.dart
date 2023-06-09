@@ -41,7 +41,7 @@ class _ListScreenState extends State<ListScreen> {
         stream: FirebaseService.getUsers(),
         builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
           if (!snapshot.hasData) {
-            return const Center(child: Text("Data not found"));
+            return const Center(child: Text("Data not found",style: TextStyle(fontSize: 25.0),));
           }
           List<UserReq> userList = getUserItems(snapshot);
 
@@ -51,34 +51,35 @@ class _ListScreenState extends State<ListScreen> {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Card(
-                    child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Text('😊 Name: ${userList[index].name}'),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Text('✉ Email: ${userList[index].email}'),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Text('📱 Mobile: ${userList[index].mobile}'),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                      Text('📖 Description: ${userList[index].description}'),
-                      const SizedBox(
-                        height: 4,
-                      ),
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        Text('😊 Name: ${userList[index].name}'),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        Text('✉ Email: ${userList[index].email}'),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        Text('📱 Mobile: ${userList[index].mobile}'),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                        Text('📖 Description: ${userList[index].description}'),
+                        const SizedBox(
+                          height: 4,
+                        ),
+                      ],
+                    ),
                   ),
-                )),
+                ),
               );
             },
           );

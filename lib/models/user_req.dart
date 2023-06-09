@@ -18,7 +18,7 @@ class UserReq {
         description: json['description']);
   }
 
-  toMap() => {
+  Map<String, dynamic> toMap() => {
         'name': name,
         'email': email,
         'mobile': mobile,
